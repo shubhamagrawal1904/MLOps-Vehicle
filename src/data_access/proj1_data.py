@@ -23,7 +23,7 @@ class Proj1Data:
             else:
                 collection=self.mongo_client[database_name][collection_name]
             logging.info('Fetching Data from DB')
-            logging.info(f'Printing \n*********\n Collection \n {collection}, {collection.count_documents({})}')
+            # logging.info(f'Printing \n*********\n Collection \n {collection}, {collection.count_documents({})}')
             df=pd.DataFrame(list(collection.find()))
             # print(df.head())
             
